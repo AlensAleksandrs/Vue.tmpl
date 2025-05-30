@@ -1,12 +1,8 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
   <h1>src/App.vue has been loaded successfully</h1>
-  <RouterView/>
+  <RouterView />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
