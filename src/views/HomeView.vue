@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <h2>This is the welcome page too!</h2>
+  <h2>You are currently accessing src/views/HomeView.vue</h2>
 </template>
