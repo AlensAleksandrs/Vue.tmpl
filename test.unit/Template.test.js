@@ -5,9 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import App from '../src/App.vue'
 import HomeView from '../src/views/HomeView.vue'
 
-const routes = [
-  { path: '/', component: HomeView }
-]
+const routes = [{ path: '/', component: HomeView }]
 
 const router = createRouter({
   history: createWebHistory(),
@@ -16,7 +14,6 @@ const router = createRouter({
 
 describe('App.vue', () => {
   it('renders App and mounts HomeView on "/" route', async () => {
-
     router.push('/')
     await router.isReady()
 
