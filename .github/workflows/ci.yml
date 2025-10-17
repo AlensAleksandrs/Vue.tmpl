@@ -31,16 +31,11 @@ jobs:
 
       - run: npm ci
 
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
       - name: Run Unit Tests
         run: npm run test:unit
 
       - name: Build app
         run: npm run build
-      - name: Start preview server
-        run: npm run preview & wait-on http://localhost:4173
 
       - name: Run E2E Tests
         run: npm run test:e2e
