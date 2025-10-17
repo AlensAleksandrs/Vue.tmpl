@@ -62,5 +62,5 @@ jobs:
           context: .
           push: true
           tags: |
-            your-dockerhub-user/vue-tmpl:latest
-            your-dockerhub-user/vue-tmpl:${{ github.sha }}
+            ${{ secrets.DOCKER_USERNAME }}/${{ vars.PROJECT_NAME }}:latest
+            ${{ secrets.DOCKER_USERNAME }}/${{ vars.PROJECT_NAME }}:${{ github.sha }}
