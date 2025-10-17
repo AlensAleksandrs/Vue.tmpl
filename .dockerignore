@@ -1,6 +1,7 @@
 node_modules
 dist
-production
+production/*
+!production/nginx.conf
 test-results
 playwright-report
 
