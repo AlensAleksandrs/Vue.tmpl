@@ -8,7 +8,7 @@ import { defineConfig, devices } from '@playwright/test'
 // require('dotenv').config();
 
 export default defineConfig({
-  testDir: './e2e',
+  testDir: './test.e2e',
   timeout: 30 * 1000,
   expect: {
     timeout: 5000,

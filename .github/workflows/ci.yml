@@ -34,7 +34,7 @@ jobs:
   docker:
     name: Build & Push Docker Image to registry
     runs-on: ubuntu-latest
-    needs: [lint, test] # only build if lint & test succeed
+    needs: [lint, test]
     steps:
       - uses: actions/checkout@v4
 
