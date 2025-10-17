@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vue-tmpl
+  labels:
+    app: vue-tmpl
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: vue-tmpl
+  template:
+    metadata:
+      labels:
+        app: vue-tmpl
+    spec:
+      containers:
+        - name: vue-tmpl
+          image: your-registry/vue-tmpl:latest
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
